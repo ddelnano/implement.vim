@@ -32,6 +32,8 @@ function! DoIt()
             echo 'Found interface in file'
             let matches = GetFunctionSignature()
             echo matches
+            bprevious
+            call AppendFunctionListToClass(matches)
 
         else
             echo 'Could not find interface'
@@ -80,9 +82,15 @@ function! AppendFunctionListToClass(functions)
     " \_ matches every character including new lines
     if search('\vclass\_.*\{\_.*}', 'e') > 0
         " Go above closing curly brace of class
-        normal! k 
-        for fn in functions
-            echo 'make awesome shit happen'
+        normal! k
+        for fn in a:functions
+            let pos = line('.')
+            let indent = indent(pos)
+            let spacing = repeat(' ', indent)
+            call cursor(pos, indent)
+            call append(pos, [spacing . '', spacing . fn, spacing .  '{', spacing . spacing . '// Add implementation', spacing . '}'])
+            normal! wq
+            close
         endfor
     else
         echom 'No class found to insert functions'

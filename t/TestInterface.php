@@ -4,5 +4,5 @@ interface TestInterface {
 
     public function testFunction();
 
-    protected function another($one, $two);
+    function another($one, $two);
 }
