@@ -9,4 +9,6 @@ The plugin is not fully completed yet but will be very shortly!  Check back for 
 
 ## Todo
 - [ ] Add more comprehensive test to vspec that verifies full plugin behavior
+- [ ] Add way to custom map function
+- [ ] Rename function that performs main functionality
 - [ ] Make it work for abstract classes
