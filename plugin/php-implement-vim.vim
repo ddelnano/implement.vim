@@ -40,7 +40,8 @@ function! DoIt()
         endif
 
     catch /.*/
-        echoerr v:exception
+        " echoerr v:exception
+        echohl v:exception
     endtry
 
 endfunction
@@ -65,7 +66,7 @@ function! GetFunctionSignature()
     let matches = []
     " For each line in the buffer look for interface / abstract functions
     for line in getline(1, '$')
-        let match = matchstr(line, '\v(public|protected|private)\s+function\s+\w+\(.*\);')
+        let match = matchstr(line, '\v(public||protected|private)\s+function\s+\w+\(.*\)')
         echo match
 
         " If match is found add it to matches list
@@ -89,9 +90,9 @@ function! AppendFunctionListToClass(functions)
             let spacing = repeat(' ', indent)
             call cursor(pos, indent)
             call append(pos, [spacing . '', spacing . fn, spacing .  '{', spacing . spacing . '// Add implementation', spacing . '}'])
-            normal! wq
-            close
         endfor
+        normal! wq
+        close
     else
         echom 'No class found to insert functions'
     endif

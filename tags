@@ -21,4 +21,5 @@ fnSignature	/Users/ddelnano/Code/php-implement-vim/t/php-implement-vim-test.vim	
 fnSignature	/Users/ddelnano/Code/php-implement-vim/t/php-implement-vim-test.vim	/^            let fnSignature = 'public function thisTest($arg1,$arg2,$arg3)'$/;"	v	language:Vim
 isAbstract	/Users/ddelnano/Code/php-implement-vim/t/php-implement-vim-test.vim	/^            let isAbstract = 0$/;"	v	language:Vim
 list	/Users/ddelnano/Code/php-implement-vim/t/php-implement-vim-test.vim	/^            let list = call('GetFunctionSignature', [])$/;"	v	language:Vim
+oneMore	/Users/ddelnano/Code/php-implement-vim/t/TestInterface.php	/^    function oneMore($one, $two);$/;"	f	language:PHP	class:TestInterface
 testFunction	/Users/ddelnano/Code/php-implement-vim/t/TestInterface.php	/^    public function testFunction();$/;"	f	language:PHP	class:TestInterface
