@@ -1,4 +1,5 @@
 ## Implement.vim
+![Image of travis ci badge](https://travis-ci.org/ddelnano/implement.vim.svg?branch=master)
 
 Implement.vim is to replicate PHPStorm's auto generate abstract class and interface methods for the current php class.
 
