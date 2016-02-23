@@ -36,9 +36,9 @@ describe 'php implement vim'
 
             let list = call('GetFunctionSignature', [])
             Expect len(list) == 3
-            Expect list[0] == 'public function testFunction();'
-            Expect list[1] == 'protected function another($arg1);'
-            Expect list[2] == 'private function moreArgs($arg1, $arg2);'
+            Expect list[0] == 'public function testFunction()'
+            Expect list[1] == 'protected function another($arg1)'
+            Expect list[2] == 'private function moreArgs($arg1, $arg2)'
         end
     end
 
