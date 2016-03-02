@@ -13,6 +13,7 @@ GetFunctionSignature	/Users/ddelnano/Code/php-implement-vim/plugin/php-implement
 TestClass	/Users/ddelnano/Code/php-implement-vim/t/test.php	/^class TestClass extends TestInterface {$/;"	c	language:PHP
 TestInterface	/Users/ddelnano/Code/php-implement-vim/t/TestInterface.php	/^interface TestInterface {$/;"	i	language:PHP
 another	/Users/ddelnano/Code/php-implement-vim/t/TestInterface.php	/^    function another($one, $two);$/;"	f	language:PHP	class:TestInterface
+another	/Users/ddelnano/Code/php-implement-vim/t/test.php	/^        function another($one, $two)$/;"	f	language:PHP	class:TestClass
 args	/Users/ddelnano/Code/php-implement-vim/t/php-implement-vim-test.vim	/^            let args = ['arg1', 'arg2']$/;"	v	language:Vim
 dict	/Users/ddelnano/Code/php-implement-vim/t/php-implement-vim-test.vim	/^            let dict = call(function('CreateFunctionDictionary'), ['name', args, isAbstract])$/;"	v	language:Vim
 existingFucntions	/Users/ddelnano/Code/php-implement-vim/t/test.php	/^    public function existingFucntions() $/;"	f	language:PHP	class:TestClass
@@ -22,4 +23,6 @@ fnSignature	/Users/ddelnano/Code/php-implement-vim/t/php-implement-vim-test.vim	
 isAbstract	/Users/ddelnano/Code/php-implement-vim/t/php-implement-vim-test.vim	/^            let isAbstract = 0$/;"	v	language:Vim
 list	/Users/ddelnano/Code/php-implement-vim/t/php-implement-vim-test.vim	/^            let list = call('GetFunctionSignature', [])$/;"	v	language:Vim
 oneMore	/Users/ddelnano/Code/php-implement-vim/t/TestInterface.php	/^    function oneMore($one, $two);$/;"	f	language:PHP	class:TestInterface
+oneMore	/Users/ddelnano/Code/php-implement-vim/t/test.php	/^        function oneMore($one, $two)$/;"	f	language:PHP	class:TestClass
 testFunction	/Users/ddelnano/Code/php-implement-vim/t/TestInterface.php	/^    public function testFunction();$/;"	f	language:PHP	class:TestInterface
+testFunction	/Users/ddelnano/Code/php-implement-vim/t/test.php	/^    public function testFunction()$/;"	f	language:PHP	class:TestClass

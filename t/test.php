@@ -6,4 +6,19 @@ class TestClass extends TestInterface {
     {
         
     }
+    
+        function oneMore($one, $two)
+    {
+        // Add implementation
+    }
+    
+        function another($one, $two)
+    {
+        // Add implementation
+    }
+    
+    public function testFunction()
+    {
+        // Add implementation
+    }
 }
